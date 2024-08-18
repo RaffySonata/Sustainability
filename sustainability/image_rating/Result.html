@@ -1,0 +1,30 @@
+{% extends "global/Page.html" %}
+
+{% block content %}
+
+<h2>Hasil Pilihan Anda</h2>
+
+<p>Berikut adalah rekap dari pilihan yang Anda buat:</p>
+
+<ul>
+    <li>Pilihan pada halaman pertama: {{ choice1_name }} dengan harga Rp{{ choice1_price }}</li>
+    <li>Pilihan pada halaman kedua: {{ choice2_name }} dengan harga Rp{{ choice2_price }}</li>
+    <li>Pilihan pada halaman ketiga: {{ choice3_name }} dengan harga Rp{{ choice3_price }}</li>
+</ul>
+
+<p><strong>Produk yang dipilih sebagai final secara random:</strong> {{ final_choice }} dengan harga Rp{{ chosen_price }}</p>
+
+<h3>Perhitungan Payoff:</h3>
+<ul>
+    <li>Endowment awal: Rp{{ endowment }}</li>
+    <li>Pengurangan untuk harga produk: Rp{{ chosen_price }}</li>
+    <li>Kerusakan yang terjadi (jika ada): Rp{{ risk_penalty }}</li>
+    <li><strong>Payoff ronde ini:</strong> Rp{{ payoff }}</li>
+</ul>
+
+<p>{{ background }}</p>
+
+    <div class="choice-buttons">
+        <button id="btn_lanjut" class="otree-btn-next btn btn-primary">Lanjut</button>
+    </div>
+{% endblock %}

@@ -1,0 +1,198 @@
+{{ block styles }}
+   <style>
+      input[type=radio] {
+        transform: scale(1.1);
+
+      }
+
+   </style>
+{{ endblock }}
+
+{{ block content }}
+
+<div style="display: flex">
+    <table>
+        <thead>
+        <tr>
+            <th colspan="14" style="white-space:nowrap;text-align:center;"><i><h2>.: Sub-kriteria Proses Produksi Halal :.</h2></i></th>
+        </tr>
+        <tr>
+            <th colspan="14" style="white-space:nowrap;text-align:center;">Menurut Anda pada sub-kriteria <b>proses produksi halal</b> dibawah ini, konsumen memutuskan untuk memilih
+            produk halal karena produk <br>tersebut memiliki . . . . </th>
+        </tr>
+        <tr><td style="visibility: hidden">#</td></tr>
+            <tr>
+
+                <th scope="col" style="text-align: center">Sub-kriteria</th>
+
+                <th scope="col" colspan="9" style="text-align: center">Pilih skala prioritas</th>
+
+                <th scope="col" style="text-align: center">Sub-kriteria</th>
+            </tr>
+            <tr>
+
+                <th scope="col" style="text-align: center;visibility: hidden">Kriteria</th>
+
+                <th scope="col" style="text-align: center">5</th>
+                <th scope="col" style="text-align: center">4</th>
+                <th scope="col" style="text-align: center">3</th>
+                <th scope="col" style="text-align: center">2</th>
+                <th scope="col" style="text-align: center">1</th>
+                <th scope="col" style="text-align: center">2</th>
+                <th scope="col" style="text-align: center">3</th>
+                <th scope="col" style="text-align: center">4</th>
+                <th scope="col" style="text-align: center">5</th>
+
+                <th scope="col" style="text-align: center;visibility: hidden">Kriteria</th>
+            </tr>
+        </thead>
+        <tr>
+            <td style="text-align: center">Bahan yang halal</td>
+            {{ for choice in form.HalalProses_B1_B2 }}
+            <td colspan="">
+                <div style="text-align: center">
+                    {{ choice }}
+
+                    <span style="text-align: center;visibility: hidden">{{ choice.label }}</span>
+                </div>
+            </td>
+            {{ endfor }}
+            <td style="text-align: center">Packaging, distribusi & Pemasaan yang syariah</td>
+        </tr>
+        {{ formfield_errors 'HalalProses_B1_B2' }}
+        <tr>
+            <td style="text-align: center">Bahan yang halal</td>
+            {{ for choice in form.HalalProses_B1_B3 }}
+            <td colspan="">
+                <div style="text-align: center">
+                    {{ choice }}
+                    <br>
+                    <span style="text-align: center;visibility:hidden">{{ choice.label }}</span>
+                </div>
+            </td>
+            {{ endfor }}
+            <td style="text-align: center">Pemilik produk seorang muslim</td>
+        </tr>
+        {{ formfield_errors 'HalalProses_B1_B3' }}
+        <tr>
+            <td style="text-align: center">Bahan yang halal</td>
+            {{ for choice in form.HalalProses_B1_B4 }}
+            <td colspan="">
+                <div style="text-align: center">
+                    {{ choice }}
+
+                    <span style="text-align: center;visibility:hidden">{{ choice.label }}</span>
+                </div>
+            </td>
+            {{ endfor }}
+            <td style="text-align: center">Peralatan,tempat dan pemrosesan produk yang syariah</td>
+        </tr>
+        {{ formfield_errors 'HalalProses_B1_B4' }}
+        <tr>
+            <td style="text-align: center">Bahan yang halal</td>
+            {{ for choice in form.HalalProses_B1_B5 }}
+            <td colspan="">
+                <div style="text-align: center">
+                    {{ choice }}
+
+                    <span style="text-align: center;visibility:hidden">{{ choice.label }}</span>
+                </div>
+            </td>
+            {{ endfor }}
+            <td style="text-align: center">Quality Control berkala dari MUI</td>
+        </tr>
+        {{ formfield_errors 'HalalProses_B1_B5' }}
+        <tr>
+            <td style="text-align: center">Packaging, distribusi & Pemasaan yang syariah</td>
+            {{ for choice in form.HalalProses_B2_B3 }}
+            <td colspan="">
+                <div style="text-align: center">
+                    {{ choice }}
+
+                    <span style="text-align: center;visibility:hidden">{{ choice.label }}</span>
+                </div>
+            </td>
+            {{ endfor }}
+            <td style="text-align: center">Pemilik produk seoran muslim</td>
+        </tr>
+        {{ formfield_errors 'HalalProses_B2_B3' }}
+        <tr>
+            <td style="text-align: center">Packaging, distribusi& Pemasaan yang syariah</td>
+            {{ for choice in form.HalalProses_B2_B4 }}
+            <td colspan="">
+                <div style="text-align: center">
+                    {{ choice }}
+
+                    <span style="text-align: center;visibility:hidden">{{ choice.label }}</span>
+                </div>
+            </td>
+            {{ endfor }}
+            <td style="text-align: center">Peralatan,tempat dan pemrosesan produk yang syariah</td>
+        </tr>
+        {{ formfield_errors 'HalalProses_B2_B4' }}
+        <tr>
+            <td style="text-align: center">Packaging, distribusi & Pemasaan yang syariah</td>
+            {{ for choice in form.HalalProses_B2_B5 }}
+            <td colspan="">
+                <div style="text-align: center">
+                    {{ choice }}
+
+                    <span style="text-align: center;visibility:hidden">{{ choice.label }}</span>
+                </div>
+            </td>
+            {{ endfor }}
+            <td style="text-align: center">Quality Control berkala dari MUI</td>
+        </tr>
+        {{ formfield_errors 'HalalProses_B2_B5' }}
+        <tr>
+            <td style="text-align: center">Peralatan,tempat dan pemrosesan produk yang syariah</td>
+            {{ for choice in form.HalalProses_B3_B4 }}
+            <td colspan="">
+                <div style="text-align: center">
+                    {{ choice }}
+
+                    <span style="text-align: center;visibility:hidden">{{ choice.label }}</span>
+                </div>
+            </td>
+            {{ endfor }}
+            <td style="text-align: center">Pemilik produk seoran muslim</td>
+        </tr>
+        {{ formfield_errors 'HalalProses_B3_B4' }}
+        <tr>
+            <td style="text-align: center">Peralatan,tempat dan pemrosesan produk yang syariah</td>
+            {{ for choice in form.HalalProses_B3_B5 }}
+            <td colspan="">
+                <div style="text-align: center">
+                    {{ choice }}
+                    <br>
+                    <span style="text-align: center;visibility:hidden">{{ choice.label }}</span>
+                </div>
+            </td>
+            {{ endfor }}
+            <td style="text-align: center">Quality Control berkala dari MUI</td>
+        </tr>
+        {{ formfield_errors 'HalalProses_B3_B5' }}
+        <tr>
+            <td style="text-align: center">Pemilik produk seoran muslim</td>
+            {{ for choice in form.HalalProses_B4_B5 }}
+            <td colspan="">
+                <div style="text-align: center">
+                    {{ choice }}
+
+                    <span style="text-align: center;visibility:hidden">{{ choice.label }}</span>
+                </div>
+            </td>
+            {{ endfor }}
+            <td style="text-align: center">Quality Control berkala dari MUI</td>
+        </tr>
+        {{ formfield_errors 'HalalProses_B4_B5' }}
+    </table>
+</div>
+
+<br>
+
+{# todo: radio buttons laid out individually, no loop (by index) #}
+
+{{ next_button }}
+
+{{ endblock }}

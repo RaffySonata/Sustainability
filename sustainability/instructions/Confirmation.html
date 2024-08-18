@@ -1,0 +1,13 @@
+{% extends "global/Page.html" %}
+
+{% block content %}
+<h1>Pengumuman Practice Session</h1>
+<p>Anda akan memasuki laman practice session. Practice session akan terdiri dari 1 ronde dengan 3 pertanyaan, termasuk hasil dari pilihan subyek.</p>
+
+<form method="post">
+    <button type="submit" class="btn btn-primary">Lanjutkan</button>
+</form>
+<form method="get" action="{% url 'VideoInstructions' %}">
+    <button type="submit" class="btn btn-secondary">Kembali</button>
+</form>
+{% endblock %}

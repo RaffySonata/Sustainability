@@ -1,0 +1,141 @@
+{{ block styles }}
+   <style>
+      input[type=radio] {
+        transform: scale(1.1);
+
+      }
+
+   </style>
+{{ endblock }}
+
+{{ block content }}
+
+<div style="display: flex">
+    <table>
+        <thead>
+        <tr>
+            <th colspan="14" style="white-space:nowrap;text-align:center;"><i><h2>.: Sub-kriteria Halal :.</h2></i></th>
+        </tr>
+        <tr>
+            <th colspan="14" style="white-space:nowrap;text-align:center;">Menurut Anda pada <b>sub-kriteria Halal</b> dibawah ini, konsumen memutuskan untuk memilih
+            produk halal karena produk <br>tersebut memiliki . . . . </th>
+        </tr>
+        <tr><td style="visibility: hidden">#</td></tr>
+            <tr>
+
+                <th scope="col" style="text-align: center">Sub-kriteria</th>
+
+                <th scope="col" colspan="9" style="text-align: center">Pilih skala prioritas</th>
+
+                <th scope="col" style="text-align: center">Sub-kriteria</th>
+            </tr>
+            <tr>
+
+                <th scope="col" style="text-align: center;visibility: hidden">Kriteria</th>
+
+                <th scope="col" style="text-align: center">5</th>
+                <th scope="col" style="text-align: center">4</th>
+                <th scope="col" style="text-align: center">3</th>
+                <th scope="col" style="text-align: center">2</th>
+                <th scope="col" style="text-align: center">1</th>
+                <th scope="col" style="text-align: center">2</th>
+                <th scope="col" style="text-align: center">3</th>
+                <th scope="col" style="text-align: center">4</th>
+                <th scope="col" style="text-align: center">5</th>
+
+                <th scope="col" style="text-align: center;visibility: hidden">Kriteria</th>
+            </tr>
+        </thead>
+        <tr>
+            <td style="text-align: center">Label halal</td>
+            {{ for choice in form.Halal_lbl_logo }}
+            <td colspan="">
+                <div style="text-align: center">
+                    {{ choice }}
+
+                    <span style="text-align: center;visibility: hidden">{{ choice.label }}</span>
+                </div>
+            </td>
+            {{ endfor }}
+            <td style="text-align: center">Logo halal yang diprint</td>
+        </tr>
+        {{ formfield_errors 'Halal_lbl_logo' }}
+        <tr>
+            <td style="text-align: center">Label halal</td>
+            {{ for choice in form.Halal_lbl_clhll }}
+            <td colspan="">
+                <div style="text-align: center">
+                    {{ choice }}
+
+                    <span style="text-align: center;visibility: hidden">{{ choice.label }}</span>
+                </div>
+            </td>
+            {{ endfor }}
+            <td style="text-align: center">Sertifikat halal</td>
+        </tr>
+        {{ formfield_errors 'Halal_lbl_clhll' }}
+        <tr>
+            <td style="text-align: center">Label halal</td>
+            {{ for choice in form.Halal_lbl_hlloff }}
+            <td colspan="">
+                <div style="text-align: center">
+                    {{ choice }}
+
+                    <span style="text-align: center;visibility: hidden">{{ choice.label }}</span>
+                </div>
+            </td>
+            {{ endfor }}
+            <td style="text-align: center">Sertifikat halal dan logo halal resmi</td>
+        </tr>
+        {{ formfield_errors 'Halal_lbl_hlloff' }}
+        <tr>
+            <td style="text-align: center">Logo halal</td>
+            {{ for choice in form.Halal_logo_clhll }}
+            <td colspan="">
+                <div style="text-align: center">
+                    {{ choice }}
+
+                    <span style="text-align: center;visibility: hidden">{{ choice.label }}</span>
+                </div>
+            </td>
+            {{ endfor }}
+            <td style="text-align: center">Sertifikat halal</td>
+        </tr>
+        {{ formfield_errors 'Halal_logo_clhll' }}
+        <tr>
+            <td style="text-align: center">Logo halal</td>
+            {{ for choice in form.Halal_logo_hlloff }}
+            <td colspan="">
+                <div style="text-align: center">
+                    {{ choice }}
+
+                    <span style="text-align: center;visibility: hidden">{{ choice.label }}</span>
+                </div>
+            </td>
+            {{ endfor }}
+            <td style="text-align: center">Sertifikat halal dan logo halal resmi</td>
+        </tr>
+        {{ formfield_errors 'Halal_logo_hlloff' }}
+        <tr>
+            <td style="text-align: center">Sertifikat halal</td>
+            {{ for choice in form.Halal_clhll_hlloff }}
+            <td colspan="">
+                <div style="text-align: center">
+                    {{ choice }}
+                    <span style="text-align: center;visibility: hidden">{{ choice.label }}</span>
+                </div>
+            </td>
+            {{ endfor }}
+            <td style="text-align: center">Sertifikat halal dan logo halal resmi</td>
+        </tr>
+        {{ formfield_errors 'Halal_clhll_hlloff' }}
+    </table>
+</div>
+
+<br>
+
+{# todo: radio buttons laid out individually, no loop (by index) #}
+
+{{ next_button }}
+
+{{ endblock }}
