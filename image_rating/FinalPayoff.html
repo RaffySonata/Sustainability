@@ -1,0 +1,16 @@
+{% extends "global/Page.html" %}
+{% load static %}
+
+{% block content %}
+
+    <h1>Hasil Akhir</h1>
+
+    <p>Putaran yang dipilih secara acak untuk perhitungan payoff akhir adalah: <strong>{{ selected_round }}</strong></p>
+
+    <p>Jenis barang yang dipilih pada putaran ini adalah: <strong>{{ goods_type }}</strong></p>
+
+    <p>Payoff akhir yang Anda peroleh berdasarkan putaran ini adalah: <strong>Rp{{ final_payoff }}</strong></p>
+
+    <p>Terima kasih telah berpartisipasi dalam eksperimen ini!</p>
+
+{% endblock %}

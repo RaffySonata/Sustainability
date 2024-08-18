@@ -1,0 +1,51 @@
+{% extends "global/Page.html" %}
+
+{% block content %}
+<h1>*** Sesi Preferensi atas Pilihan Produk ***</h1>
+<p>Anda diminta untuk memilih produk sesuai dengan preferensi Anda di sesi ini. Berikut adalah penjelasan detail untuk sesi pilihan produk:</p>
+
+<h2>Jenis Produk</h2>
+<p>Anda memiliki empat klasifikasi produk, yaitu: 1) peralatan rumah tangga, 2) kendaraan, 3) sumber listrik rumah, dan 4) bahan bakar minyak. Di setiap klasifikasi, Anda memiliki tiga produk (Produk A, Produk B, dan Produk C) yang akan diperbandingkan dalam bentuk pairwise choice (dua pilihan). Produk A dan B merupakan produk ramah keberlanjutan yang saat ini sangat mungkin belum dipakai secara masif, seperti mobil dan kompor listrik. Produk C merupakan produk konvensional yang tidak lebih ramah keberlanjutan dan telah digunakan secara masif dalam jangka waktu cukup lama, seperti mobil bensin dan kompor gas. Produk C memiliki dua variasi (C1 dan C2) berdasarkan harganya.</p>
+
+<h2>Pairwise Choice</h2>
+<p>Anda memiliki tiga pertanyaan pairwise choice di setiap ronde dengan prosedur urutan sebagai berikut:</p>
+<ul>
+    <li>1. Produk A vs Produk B</li>
+    <li>2. Produk A/B (berdasarkan pilihan di poin 1) vs Produk C1</li>
+    <li>3. Produk A/B (berdasarkan pilihan di poin 1) vs Produk C2</li>
+</ul>
+<p>Secara total, Anda menghadapi 48 pertanyaan di sesi pilihan produk.</p>
+
+<h2>Konteks Situasi</h2>
+<p>16 ronde di dalam sesi ini terbagi ke dalam empat situasi yang memiliki konteks berbeda, yaitu: 1) mengenai jumlah, dan kualitas infrastruktur, 2) mengenai ketersediaan produk di pasar, 3) mengenai jumlah pengguna produk tersebut, serta 4) mengenai proses asal produksi produk tersebut.</p>
+
+<h2>Apa yang Anda Dapatkan dari Keputusan Anda di Setiap Ronde?</h2>
+<p>Keputusan yang Anda lakukan di masing-masing ronde akan menjadi payoff Anda untuk penghitungan pembayaran dari sesi ini. Payoff Anda adalah harga produk akhir yang Anda pilih pada poin ketiga di penjelasan mengenai “Pairwise Choice”: Produk A/B vs Produk C2.</p>
+
+<h2>Pembayaran dari Sesi Ini</h2>
+<p>Salah satu dari 16 ronde akan dipilih secara acak untuk menjadi basis pembayaran Anda, sesuai dengan Keputusan yang Anda telah berikan. Produk yang menjadi preferensi Anda di ronde terpilih adalah yang akan menjadi pembayaran Anda dengan ketentuan sebagai berikut:</p>
+<ul>
+    <li>1. Jika Anda memilih Produk A atau Produk B di ketiga pertanyaan di ronde terpilih, maka Anda akan langsung mendapatkan Produk A atau B sebagai basis pembayaran sesuai konsistensi pilihan Anda tersebut.</li>
+    <li>2. Jika Anda memilih Produk C1 di pertanyaan kedua dan Produk C2 di pertanyaan ketiga, maka Anda akan mendapatkan Produk C1 atau Produk C2 dengan peluang 50:50 sebagai basis pembayaran.</li>
+</ul>
+<p>Produk yang Anda terima sebagai pembayaran dari sesi ini akan dikonversi dengan nilai tukar tertentu sesuai dengan produk yang terpilih. Berikut adalah nilai konversi untuk masing-masing jenis produk:</p>
+<ul>
+    <li>a. 1:500 untuk produk perangkat rumah tangga kompor</li>
+    <li>b. 1:10000 untuk produk kendaraan mobil</li>
+    <li>c. 1:500 untuk produk sumber listrik</li>
+    <li>d. 1:10 untuk produk bahan bakar minyak</li>
+</ul>
+
+<h2>Proses Pembayaran</h2>
+<p>Anda akan memperoleh pembayaran pada hari berlangsungnya sesi eksperimen Anda melalui pembayaran digital. Untuk itu, Anda akan diminta untuk memberikan informasi akun pembayaran digital Anda pada formulir yang disediakan.</p>
+
+<h2>Catatan Penting</h2>
+<p>Eksperimen ter pastikan tidak mengetahui keputusan Anda maupun payoff Anda sebelum selesainya sebuah ronde mengacu sistem pencatatan yang diimplementasikan di dalam sistem komputer.</p>
+
+<form method="post">
+    <button type="submit" class="btn btn-primary">Lanjutkan</button>
+</form>
+<form method="get" action="{% url 'Instructions1' %}">
+    <button type="submit" class="btn btn-secondary">Kembali</button>
+</form>
+{% endblock %}
