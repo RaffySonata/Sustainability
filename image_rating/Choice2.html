@@ -28,7 +28,7 @@
         font-size: 16px;
     }
 </style>
-
+<h2>Ronde {{player.round_number}}</h2>
 <h2>Pertanyaan 2</h2>
 <p>
     Anda memiliki uang sebanyak <b>Rp{{ player.endowment_s }} juta</b> untuk digunakan membeli salah satu dari dua produk di bawah ini. <b>Produk di sebelah kiri</b> di bawah ini merupakan produk yang dianggap sebagai <b>produk ramah keberlanjutan</b> yang memiliki ciri khas:
@@ -56,14 +56,14 @@
             <img src="{% static image_A %}" alt="Winner of Round 1">
             <h3>{{ name_A }}</h3>
             <p>{{ desc_A }}</p>
-            <p>Harga: Rp{{ price_A }}</p>
+            <p>Harga: <b>Rp{{ price_A }}</b></p>
             <label><input type="radio" name="chosen_product" value="A"> Pilih Produk A/B</label>
         </div>
         <div class="product">
             <img src="{% static image_B %}" alt="Product C1">
             <h3>{{ name_B }}</h3>
             <p>{{ desc_B }}</p>
-            <p>Harga: Rp{{ price_B }}</p>
+            <p>Harga: <b>Rp{{ price_B }}</b></p>
             <label><input type="radio" name="chosen_product" value="B"> Pilih Produk C1</label>
         </div>
     </div>
