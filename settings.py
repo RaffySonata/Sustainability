@@ -24,7 +24,7 @@ SESSION_CONFIGS = [
     dict(
         name='sustainability',
         app_sequence=['instructions','image_rating','survey'],
-        num_demo_participants=3,
+        num_demo_participants=4,
     ),
 ]
 
