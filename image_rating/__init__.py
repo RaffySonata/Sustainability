@@ -177,7 +177,8 @@ class Choice1(Page):
         cycle = (player.round_number - 1) // 4
         images, names, descriptions, prices, reliabilities, risk_cost, contexts = get_current_context(player)
         context = contexts[cycle]
-        additional_info = "Jika produk yang Anda pilih rusak/bermasalah dalam jangka waktu 5 tahun, maka Anda harus mengeluarkan biaya perbaikan."
+        additional_info = additional_info = f"Jika produk yang Anda pilih rusak/bermasalah dalam jangka waktu 5 tahun, maka Anda harus mengeluarkan biaya perbaikan sebesar Rp{risk_cost:,}."
+
 
         endowment = player.endowment / 1000000
         player.endowment_s = '{:,}'.format(round(endowment)).replace(',', '.')
@@ -254,7 +255,7 @@ class Choice2(Page):
         cycle = (player.round_number - 1) // 4
         images, names, descriptions, prices, reliabilities, risk_cost, contexts = get_current_context(player)
         context = contexts[cycle]
-        additional_info = "Jika produk yang Anda pilih rusak/bermasalah dalam jangka waktu 5 tahun, maka Anda harus mengeluarkan biaya perbaikan."
+        additional_info = f"Jika produk yang Anda pilih rusak/bermasalah dalam jangka waktu 5 tahun, maka Anda harus mengeluarkan biaya perbaikan sebesar Rp{risk_cost:,}."
 
         return dict(
             context=context,
@@ -328,7 +329,7 @@ class Choice3(Page):
         cycle = (player.round_number - 1) // 4
         images, names, descriptions, prices, reliabilities, risk_cost, contexts = get_current_context(player)
         context = contexts[cycle]
-        additional_info = "Jika produk yang Anda pilih rusak/bermasalah dalam jangka waktu 5 tahun, maka Anda harus mengeluarkan biaya perbaikan."
+        additional_info = f"Jika produk yang Anda pilih rusak/bermasalah dalam jangka waktu 5 tahun, maka Anda harus mengeluarkan biaya perbaikan sebesar Rp{risk_cost:,}."
 
         return dict(
             context=context,
