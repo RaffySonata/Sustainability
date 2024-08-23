@@ -27,6 +27,22 @@
         padding: 10px 20px;
         font-size: 16px;
     }
+        img.responsive {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        max-height: 200px; /* Adjust this as needed */
+    }
+
+    .choice-container {
+        text-align: center;
+    }
+
+    .confirmation-button {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
 </style>
 
 <h2>Ronde {{player.round_number}}</h2>
@@ -51,14 +67,14 @@
 <form method="post">
     <div class="product-container">
         <div class="product">
-            <img src="{% static image_A %}" alt="Product A">
+            <img src="{% static image_A %}" class="responsive" alt="Product A">
             <h3>{{ name_A }}</h3>
             <p>{{ desc_A }}</p>
             <p>Harga: <b>Rp{{ price_A }}</b></p>
             <label><input type="radio" name="chosen_product" value="A"> Pilih Produk A</label>
         </div>
         <div class="product">
-            <img src="{% static image_B %}" alt="Product B">
+            <img src="{% static image_B %}" class="responsive" alt="Product B">
             <h3>{{ name_B }}</h3>
             <p>{{ desc_B }}</p>
             <p>Harga: <b>Rp{{ price_B }}</b></p>

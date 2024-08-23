@@ -10,22 +10,38 @@
     }
     .product {
         border: 1px solid #ccc;
-        padding: 10px.
+        padding: 10px;
         width: 45%;
-        text-align: center.
+        text-align: center;
     }
     .product img {
-        width: 100%.
+        width: 100%;
     }
     .choice-buttons {
-        display: flex.
-        justify-content: center.
-        margin: 20px 0.
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
     }
     .choice-buttons button {
-        margin: 0 10px.
-        padding: 10px 20px.
-        font-size: 16px.
+        margin: 0 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+        img.responsive {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        max-height: 200px; /* Adjust this as needed */
+    }
+
+    .choice-container {
+        text-align: center;
+    }
+
+    .confirmation-button {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
     }
 </style>
 <h2>Ronde {{player.round_number}}</h2>
@@ -53,14 +69,14 @@
 <form method="post">
     <div class="product-container">
         <div class="product">
-            <img src="{% static image_A %}" alt="Winner of Round 1">
+            <img src="{% static image_A %}" class="responsive" alt="Winner of Round 1">
             <h3>{{ name_A }}</h3>
             <p>{{ desc_A }}</p>
             <p>Harga: <b>Rp{{ price_A }}</b></p>
             <label><input type="radio" name="chosen_product" value="A"> Pilih Produk A/B</label>
         </div>
         <div class="product">
-            <img src="{% static image_B %}" alt="Product C2">
+            <img src="{% static image_B %}" class="responsive" alt="Product C2">
             <h3>{{ name_B }}</h3>
             <p>{{ desc_B }}</p>
             <p>Harga: <b>Rp{{ price_B }}</b></p>
@@ -72,7 +88,7 @@
         {{additional_info}}
     </p>
     <br>
-    <div class="choice-buttons">
+    <div class="choice-buttons" style="text-align: center;">
         <button id="btn_lanjut" disabled="disabled" class="otree-btn-next btn btn-primary">KONFIRMASI</button>
     </div>
 </form>

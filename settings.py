@@ -37,8 +37,35 @@ SESSION_CONFIG_DEFAULTS = dict(
     real_world_currency_per_point=1.00, participation_fee=0.00, doc=""
 )
 
-PARTICIPANT_FIELDS = []
-SESSION_FIELDS = []
+SESSION_FIELDS = [
+    'completions_by_treatment',
+    'past_groups',
+    'matrices',
+    'wait_for_ids',
+    'arrived_ids',
+]
+
+PARTICIPANT_FIELDS = [
+    'app_payoffs',
+    'app_row',
+    'expiry',
+    'finished_rounds',
+    'language',
+    'num_rounds',
+    'partner_history',
+    'past_group_id',
+    'progress',
+    'quiz_num_correct',
+    'selected_round',
+    'task_rounds',
+    'time_pressure',
+    'wait_page_arrival',
+    'umr_list',
+    'iw_lists',
+    'sw_lists',
+    'endowment_lists',
+    'iw_type',
+]
 
 # ISO-639 code
 # for example: de, fr, ja, ko, zh-hans
@@ -48,10 +75,11 @@ LANGUAGE_CODE = 'en'
 REAL_WORLD_CURRENCY_CODE = 'USD'
 USE_POINTS = True
 
-OTREE_AUTH_LEVEL = 'DEMO'
+DEBUG=True
 ADMIN_USERNAME = 'admin'
-# for security, best to set admin password in an environment variable
-ADMIN_PASSWORD = 'admin'
+# for security, best to set admin passwordInput in an environment variable
+ADMIN_PASSWORD = environ.get('OTREE_ADMIN_PASSWORD')
+AUTH_LEVEL= environ.get('OTREE_AUTH_LEVEL')
 
 DEMO_PAGE_INTRO_HTML = """ """
 
