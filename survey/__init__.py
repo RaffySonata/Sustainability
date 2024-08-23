@@ -15,7 +15,7 @@ class Player(BasePlayer):
     # Define form fields based on the questions
     q1 = models.StringField(
         label="Saya yakin saya akan selalu membeli BBM Pertamax Green 95 demi lingkungan dan pembangunan yang berkelanjutan meski SPBU yang menjualnya cukup jauh (3 km) dari tempat saya tinggal.",
-        choices=['Ya', 'Tidak'],
+        choices=['Dibawah 3km', '3km-5km','Diatas 5km'],
         widget=widgets.RadioSelect
     )
     q2 = models.StringField(
