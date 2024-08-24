@@ -21,6 +21,11 @@ SESSION_CONFIGS = [
         app_sequence=['survey'],
         num_demo_participants=3,
     ),
+    dict(
+        name='sustainability',
+        app_sequence=['instructions','image_rating','survey'],
+        num_demo_participants=3,
+    ),
 ]
 
 # if you set a property in SESSION_CONFIG_DEFAULTS, it will be inherited by all configs
@@ -43,10 +48,10 @@ LANGUAGE_CODE = 'en'
 REAL_WORLD_CURRENCY_CODE = 'USD'
 USE_POINTS = True
 
+OTREE_AUTH_LEVEL = 'DEMO'
 ADMIN_USERNAME = 'admin'
 # for security, best to set admin password in an environment variable
 ADMIN_PASSWORD = 'admin'
-    #environ.get('OTREE_ADMIN_PASSWORD')
 
 DEMO_PAGE_INTRO_HTML = """ """
 
