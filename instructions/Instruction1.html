@@ -3,6 +3,25 @@
 {% block content %}
 <form method="post">
     <div id="section1">
+    <h2 style="text-align:center">Selamat Datang Di Eksperimen Asuransi Kendaraan</h2>
+    <h3 style="text-align:center">Eksperimen ini ditujukan untuk mendapatkan informasi mengenai preferensi individu terhadap Asuransi kendaraan umum dan pribadi</h3>
+    <h4 style="text-align:center">Terdapat dua sesi di dalam eksperimen ini: <br> <b>1) eksperimen asuransi kendaraan pribadi, <br> 2) eksperimen asuransi kendaraan umum</b></h4>
+    <p><br>
+    <center>
+        <table>
+            <tr>
+
+                    <td><img src="{{static 'rgbi_image/ugm.png' }}" width="250px" style="margin:5px; padding:15px"></td>
+
+            </tr>
+        </table>
+    </center>
+
+    <br><p>
+        <button type="button" onclick="nextSection(2)">Lanjutkan</button>
+    </div>
+
+    <div id="section2" style="display:none;">
         <h1>INSTRUKSI UMUM</h1>
         <p>Selamat datang dan terima kasih telah bersedia untuk mengikuti eksperimen ini. Mohon baca dengan seksama instruksi ini agar Anda dapat memahami apa yang harus Anda lakukan di dalam eksperimen ini. Eksperimen ini memberikan Anda kesempatan untuk memperoleh uang tunai yang akan dibayarkan segera setelah Anda menyelesaikan rangkaian eksperimen ini. Besaran uang yang akan Anda peroleh bergantung pada apa yang Anda dan rekan Anda lakukan di dalam eksperimen ini. Oleh karenanya, mohon untuk serius dalam menyelesaikannya sesuai dengan preferensi Anda. Uang yang Anda peroleh dalam eksperimen ini akan ditambahkan dengan uang kehadiran sebesar Rp10.000.</p>
 
@@ -17,10 +36,10 @@
         <h2>3. Pembayaran</h2>
         <p>Pembayaran untuk Anda utamanya berasal dari keputusan yang Anda lakukan di sesi pertama. Oleh karena itu, masing-masing peserta dapat memiliki pembayaran yang berbeda. Penjelasan mengenai ini ada di halaman selanjutnya. Pembayaran yang Anda peroleh ini kemudian ditambahkan dengan uang kehadiran dan penyelesaian rangkaian eksperimen sebesar Rp10.000.</p>
 
-        <button type="button" onclick="nextSection(2)">Lanjutkan</button>
+        <button type="button" onclick="nextSection(3)">Lanjutkan</button>
     </div>
 
-    <div id="section2" style="display:none;">
+    <div id="section3" style="display:none;">
         <h1>Sesi Preferensi atas Pilihan Produk</h1>
         <p>Anda diminta untuk memilih produk sesuai dengan preferensi Anda di sesi ini. Berikut adalah penjelasan detail untuk sesi pilihan produk:</p>
 
@@ -62,34 +81,34 @@
         <h2>Catatan Penting</h2>
         <p>Eksperimen ter pastikan tidak mengetahui keputusan Anda maupun payoff Anda sebelum selesainya sebuah ronde mengacu sistem pencatatan yang diimplementasikan di dalam sistem komputer.</p>
 
-        <button type="button" onclick="previousSection(1)">Kembali</button>
-        <button type="button" onclick="nextSection(3)">Lanjutkan</button>
+        <button type="button" onclick="previousSection(2)">Kembali</button>
+        <button type="button" onclick="nextSection(4)">Lanjutkan</button>
     </div>
 
-    <div id="section3" style="display:none;">
+    <div id="section4" style="display:none;">
         <h1>Instruksi Video</h1>
         <p>Silakan tonton video berikut untuk memahami cara pengisian.</p>
 
         <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <br>
         <br>
-        <button type="button" onclick="previousSection(2)">Kembali</button>
-        <button type="button" onclick="nextSection(4)">Lanjutkan</button>
-    </div>
-
-    <div id="section4" style="display:none;">
-        <h1>Pengumuman Practice Session</h1>
-        <p>Anda akan memasuki laman practice session. Practice session akan terdiri dari 1 ronde dengan 3 pertanyaan, termasuk hasil dari pilihan subyek.</p>
-
         <button type="button" onclick="previousSection(3)">Kembali</button>
         <button type="button" onclick="nextSection(5)">Lanjutkan</button>
     </div>
 
     <div id="section5" style="display:none;">
+        <h1>Pengumuman Practice Session</h1>
+        <p>Anda akan memasuki laman practice session. Practice session akan terdiri dari 1 ronde dengan 3 pertanyaan, termasuk hasil dari pilihan subyek.</p>
+
+        <button type="button" onclick="previousSection(4)">Kembali</button>
+        <button type="button" onclick="nextSection(6)">Lanjutkan</button>
+    </div>
+
+    <div id="section6" style="display:none;">
         <h1>Pengumuman Akhir Practice Session</h1>
         <p>Practice session telah selesai. Bersiaplah untuk menuju laman real experiment.</p>
 
-        <button type="button" onclick="previousSection(4)">Kembali</button>
+        <button type="button" onclick="previousSection(5)">Kembali</button>
         <button type="submit" class="btn btn-primary">Lanjutkan</button>
     </div>
 </form>
