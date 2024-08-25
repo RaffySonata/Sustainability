@@ -4,7 +4,7 @@ import random
 class C(BaseConstants):
     NAME_IN_URL = 'image_rating'
     PLAYERS_PER_GROUP = None
-    NUM_ROUNDS = 1  # Four cycles of four rounds each
+    NUM_ROUNDS = 16  # Four cycles of four rounds each
 
     # Car images for round 1
     CAR_IMAGES = ['M_A.jpeg', 'M_B.jpeg', 'M_C1.jpeg', 'M_C2.jpeg']
