@@ -4,7 +4,7 @@ import random
 class C(BaseConstants):
     NAME_IN_URL = 'image_rating'
     PLAYERS_PER_GROUP = None
-    NUM_ROUNDS = 16  # Four cycles of four rounds each
+    NUM_ROUNDS = 1  # Four cycles of four rounds each
 
     # Car images for round 1
     CAR_IMAGES = ['M_A.jpeg', 'M_B.jpeg', 'M_C1.jpeg', 'M_C2.jpeg']
@@ -154,7 +154,13 @@ class Player(BasePlayer):
     choice1_winner = models.StringField()
     choice2_winner = models.StringField()
     choice3_winner = models.StringField()
+    choice1_price = models.FloatField()
+    choice2_price = models.FloatField()
+    choice3_price = models.FloatField()
     random_round = models.IntegerField()
+    context = models.IntegerField()
+    app_payoff = models.FloatField()
+    final_payoff = models.FloatField()
 
 def get_current_context(player):
     round_in_cycle = (player.round_number - 1) % 4
@@ -177,6 +183,7 @@ class Choice1(Page):
         cycle = (player.round_number - 1) // 4
         images, names, descriptions, prices, reliabilities, risk_cost, contexts = get_current_context(player)
         context = contexts[cycle]
+        player.context = cycle + 1
         additional_info = additional_info = f"Jika produk yang Anda pilih rusak/bermasalah dalam jangka waktu 5 tahun, maka Anda harus mengeluarkan biaya perbaikan sebesar Rp{risk_cost:,}."
 
 
@@ -433,6 +440,9 @@ class Result(Page):
         risk_penalty = player.risk_penalty if player.risk_penalty is not None else 0
         payoff = (endowment - chosen_price) + chosen_price - risk_penalty
         player.income = payoff
+        player.choice1_price = player.participant.vars.get('choice1_price')
+        player.choice2_price = player.participant.vars.get('choice2_price')
+        player.choice3_price = player.participant.vars.get('choice3_price')
 
         return dict(
             choice1_name=player.participant.vars.get('choice1_name'),
@@ -481,17 +491,26 @@ class FinalPayoff(Page):
         round_index = (selected_round - 1) % 4
         if round_index == 0:
             goods_type = "Mobil"
+            adjusted_payoff = final_payoff / 10000
         elif round_index == 1:
             goods_type = "Kompor Listrik"
+            adjusted_payoff = final_payoff / 500
         elif round_index == 2:
             goods_type = "Listrik Rumah"
+            adjusted_payoff = final_payoff / 500
         elif round_index == 3:
             goods_type = "BBM"
+            adjusted_payoff = final_payoff / 10
+
+        # Store the final payoff in the player's field
+        player.app_payoff = adjusted_payoff
+        player.final_payoff = player.app_payoff + 10000
 
         return dict(
             selected_round=selected_round,
-            final_payoff='{:,}'.format(round(final_payoff)).replace(',', '.'),
-            goods_type=goods_type
+            app_payoff='{:,}'.format(round(player.app_payoff)).replace(',', '.'),
+            final_payoff='{:,}'.format(round(player.final_payoff)).replace(',', '.'),
+            goods_type=goods_type,
         )
 
 page_sequence = [Choice1, Choice2, Choice3, Result, FinalPayoff]
