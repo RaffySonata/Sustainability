@@ -23,7 +23,7 @@ SESSION_CONFIGS = [
     ),
     dict(
         name='sustainability',
-        app_sequence=['instructions','image_rating','survey'],
+        app_sequence=['instructions','practice_round','image_rating','survey'],
         num_demo_participants=3,
     ),
     dict(
