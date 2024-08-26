@@ -26,6 +26,11 @@ SESSION_CONFIGS = [
         app_sequence=['instructions','image_rating','survey'],
         num_demo_participants=3,
     ),
+    dict(
+        name='practice',
+        app_sequence=['practice_round'],
+        num_demo_participants=3,
+    ),
 ]
 
 # if you set a property in SESSION_CONFIG_DEFAULTS, it will be inherited by all configs
