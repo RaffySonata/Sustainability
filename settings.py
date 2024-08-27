@@ -83,7 +83,7 @@ USE_POINTS = True
 DEBUG=True
 ADMIN_USERNAME = 'admin'
 # for security, best to set admin passwordInput in an environment variable
-ADMIN_PASSWORD = environ.get('OTREE_ADMIN_PASSWORD')
+ADMIN_PASSWORD = 'admin'
 AUTH_LEVEL= environ.get('OTREE_AUTH_LEVEL')
 
 DEMO_PAGE_INTRO_HTML = """ """

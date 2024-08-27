@@ -50,20 +50,23 @@
     Anda memiliki uang sebanyak <b>Rp{{ player.endowment_s }} juta</b> untuk digunakan membeli salah satu dari dua produk di bawah ini. <b>Produk di sebelah kiri</b> di bawah ini merupakan produk yang dianggap sebagai <b>produk ramah keberlanjutan</b> yang memiliki ciri khas:
 </p>
 <ul>
-    <li>tidak menimbulkan polusi bagi udara, air, dan tanah,</li>
-    <li>tahan lama dan mudah terurai ketika sudah tidak digunakan,</li>
-    <li>diproduksi menggunakan bahan yang terbarukan (contoh: bukan dari fosil),</li>
-    <li>menggunakan konsumsi energi yang rendah,</li>
-    <li>aman dan meminimalisir risiko sosial, ekonomi, dan lingkungan, serta</li>
-    <li>sesuai dengan peraturan yang berlaku.</li>
+    <li>Tidak menimbulkan polusi bagi udara, air, dan tanah,</li>
+    <li>Tahan lama dan mudah terurai ketika sudah tidak digunakan,</li>
+    <li>Diproduksi menggunakan bahan yang terbarukan (contoh: bukan dari fosil),</li>
+    <li>Menggunakan konsumsi energi yang rendah,</li>
+    <li>Aman dan meminimalisir risiko sosial, ekonomi, dan lingkungan, serta</li>
+    <li>Sesuai dengan peraturan yang berlaku.</li>
 </ul>
     <P>
-        <b>Produk di sebelah kiri merupakan produk yang Anda pilih pada pilihan pertama</b>
+        <b>Produk di sebelah kiri merupakan produk yang Anda pilih sebelumnya di Pertanyaan 1 di ronde ini</b>
     </P>
 <p>
-    {{ context }}
+    <b>Catatan:</b>
 </p>
-    <p>
+<ul>
+    <li>{{ context }}</li>
+</ul>
+<p>
     Berikut adalah kedua produk tersebut untuk Anda pilih:
 </p>
 <form method="post">
@@ -73,14 +76,14 @@
             <h3>{{ name_A }}</h3>
             <p>{{ desc_A }}</p>
             <p>Harga: <b>Rp{{ price_A }}</b></p>
-            <label><input type="radio" name="chosen_product" value="A"> Pilih Produk A/B</label>
+            <label><input type="radio" name="chosen_product" value="A"> Pilih Produk Ini</label>
         </div>
         <div class="product">
             <img src="{% static image_B %}" class="responsive" alt="Product C2">
             <h3>{{ name_B }}</h3>
             <p>{{ desc_B }}</p>
             <p>Harga: <b>Rp{{ price_B }}</b></p>
-            <label><input type="radio" name="chosen_product" value="B"> Pilih Produk C2</label>
+            <label><input type="radio" name="chosen_product" value="B"> Pilih Produk Ini</label>
         </div>
     </div>
         <br>

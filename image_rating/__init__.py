@@ -8,12 +8,12 @@ class C(BaseConstants):
 
     # Car images for round 1
     CAR_IMAGES = ['M_A.jpeg', 'M_B.jpeg', 'M_C1.jpeg', 'M_C2.jpeg']
-    CAR_NAMES = ['Cherry Omoda E5', 'Wuling Bingo', 'Toyota Corolla Altis V AT', 'Toyota Yaris']
+    CAR_NAMES = ['Cherry Omoda E5 (A)', 'Wuling Bingo (B)', 'Toyota Corolla Altis V AT (C1)', 'Toyota Yaris (C2)']
     CAR_DESCRIPTIONS = [
         'Ini adalah mobil Listrik Chery Omoda E5 dengan spesifikasi baterai LFP (Lithium Ferrophospate) berkapasitas 61 kWh, daya tempuh 430 km, bertenaga 201 HP, memiliki torsi 340 Nm, dan top speed 172 km/jam yang memiliki daya tahan 90% untuk penggunaan reguler sampai dengan tahun ke-5.',
         'Ini adalah mobil Listrik Wuling Binguo EV Premium Range dengan spesifikasi baterai LFP (Lithium Ferrophospate) berkapasitas 37,9 kWh, daya tempuh 410 km, bertenaga 67 HP, memiliki torsi 150 Nm, dan top speed 120 km/jam yang memiliki daya tahan 85% untuk penggunaan reguler sampai dengan tahun ke-5.',
-        'Ini adalah mobil Toyota Corolla Altis V AT berbahan bakar bensin dengan spesifikasi mesin 1798 cc, bertenaga 138 HP, memiliki torsi 172 Nm, dan top speed 200 km/jam yang memiliki daya tahan 95% (C1) untuk penggunaan reguler sampai dengan tahun ke-5',
-        'Ini adalah mobil Toyota Yaris mesin 1496 cc, tenaga 106 HP, torsi 140 Nm, bensin, top speed 200 km/jam yang memiliki daya tahan 80% (C2) untuk penggunaan reguler sampai dengan tahun ke-5'
+        'Ini adalah mobil Toyota Corolla Altis V AT berbahan bakar bensin dengan spesifikasi mesin 1798 cc, bertenaga 138 HP, memiliki torsi 172 Nm, dan top speed 200 km/jam yang memiliki daya tahan 95% untuk penggunaan reguler sampai dengan tahun ke-5',
+        'Ini adalah mobil Toyota Yaris mesin 1496 cc, tenaga 106 HP, torsi 140 Nm, bensin, top speed 200 km/jam yang memiliki daya tahan 80% untuk penggunaan reguler sampai dengan tahun ke-5'
     ]
     CAR_PRICES = [500000000, 400000000, 600000000, 350000000]
     CAR_RELIABILITIES = [0.90, 0.85, 0.95, 0.80]
@@ -21,12 +21,12 @@ class C(BaseConstants):
 
     # Appliances images for round 2
     APPLIANCES_IMAGES = ['K_A.jpeg', 'K_B.jpeg', 'K_C1.jpeg', 'K_C2.jpeg']
-    APPLIANCES_NAMES = ['Kompor Listrik A', 'Kompor Listrik B', 'Kompor Gas C1', 'Kompor Gas C2']
+    APPLIANCES_NAMES = ['Kompor Listrik (A)', 'Kompor Listrik (B)', 'Kompor Gas (C1)', 'Kompor Gas (C2)']
     APPLIANCES_DESCRIPTIONS = [
-        'Kompor listrik seharga Rp7 juta (Bentuk A sesuai gambar) yang memiliki 90% keawetan untuk penggunaan reguler sampai dengan tahun ke-5',
-        'Kompor listrik seharga Rp5 juta (Bentuk B sesuai gambar) yang memiliki 85% keawetan untuk penggunaan reguler sampai dengan tahun ke-5.',
-        'Kompor gas seharga Rp8 juta (Bentuk C1 sesuai gambar) yang memiliki 95% keawetan (C1) untuk penggunaan reguler sampai dengan tahun ke-5.',
-        'Kompor gas seharga Rp4 juta (Bentuk C2 sesuai gambar) 80% (C2) untuk penggunaan reguler sampai dengan tahun ke-5.'
+        'Kompor listrik seharga Rp7 juta yang memiliki 90% keawetan untuk penggunaan reguler sampai dengan tahun ke-5',
+        'Kompor listrik seharga Rp5 juta yang memiliki 85% keawetan untuk penggunaan reguler sampai dengan tahun ke-5.',
+        'Kompor gas seharga Rp8 juta yang memiliki 95% keawetan untuk penggunaan reguler sampai dengan tahun ke-5.',
+        'Kompor gas seharga Rp4 juta yang memiliki 80% keawetan untuk penggunaan reguler sampai dengan tahun ke-5.'
     ]
     APPLIANCES_PRICES = [7000000, 5000000, 8000000, 4000000]
     APPLIANCES_RELIABILITIES = [0.90, 0.85, 0.95, 0.80]
@@ -34,12 +34,12 @@ class C(BaseConstants):
 
     # Electricity images for round 3
     ELECTRICITY_IMAGES = ['L_A.jpeg', 'L_B.jpeg', 'L_C1.jpeg', 'L_C2.jpeg']
-    ELECTRICITY_NAMES = ['Panel Surya A', 'Panel Surya B', 'PLN C1', 'PLN C2']
+    ELECTRICITY_NAMES = ['Panel Surya (A)', 'Panel Surya (B)', 'PLN (C1)', 'PLN (C2)']
     ELECTRICITY_DESCRIPTIONS = [
-        'Listrik rumah kombinasi dari panel surya (PLTS Rumah) yang mampu menghasilkan daya maksimum +/-500 Watt plus Listrik PLN 900 Watt (Bentuk A sesuai gambar) dengan biaya total Rp12 juta yang memiliki 90% keandalan untuk penggunaan reguler sampai dengan tahun ke-5.',
-        'Listrik rumah kombinasi dari panel surya (PLTS Rumah) yang mampu menghasilkan daya maksimum +/-300 Watt plus Listrik PLN 900 Watt (Bentuk B sesuai gambar) dengan biaya total Rp10 juta yang memiliki 85% keandalan untuk penggunaan reguler sampai dengan tahun ke-5.',
-        'Listrik rumah dari jaringan PLN (berasal dari Pembangkit Listrik Tenaga Uap berbahan baku batu bara) untuk daya maksimum 2200 Watt dengan biaya (instalasi dan tagihan) Rp15 juta (Bentuk C1 sesuai gambar) yang memiliki keandalan 95% (C1) untuk penggunaan reguler sampai dengan tahun ke-5.',
-        'Listrik rumah dari jaringan PLN (berasal dari Pembangkit Listrik Tenaga Uap berbahan baku batu bara) untuk daya maksimum 1300 Watt dengan biaya Rp8 juta (Bentuk C2) yang memiliki keandalan 80% (C2) untuk penggunaan reguler sampai dengan tahun ke-5.'
+        'Listrik rumah kombinasi dari panel surya (PLTS Rumahan) yang mampu menghasilkan daya maksimum +/-500 Watt plus Listrik PLN 900 Watt dengan biaya total Rp12 juta yang memiliki 90% keandalan untuk penggunaan reguler sampai dengan tahun ke-5.',
+        'Listrik rumah kombinasi dari panel surya (PLTS Rumahan) yang mampu menghasilkan daya maksimum +/-300 Watt plus Listrik PLN 900 Watt dengan biaya total Rp10 juta yang memiliki 85% keandalan untuk penggunaan reguler sampai dengan tahun ke-5.',
+        'Listrik rumah dari jaringan PLN (berasal dari PLTU berbahan baku batu bara) untuk daya maksimum 2200 Watt dengan biaya (instalasi dan tagihan) Rp15 juta yang memiliki keandalan 95% untuk penggunaan reguler sampai dengan tahun ke-5.',
+        'Listrik rumah dari jaringan PLN (berasal dari PLTU berbahan baku batu bara) untuk daya maksimum 1300 Watt dengan biaya Rp8 juta yang memiliki keandalan 80% untuk penggunaan reguler sampai dengan tahun ke-5.'
     ]
     ELECTRICITY_PRICES = [12000000, 10000000, 15000000, 8000000]
     ELECTRICITY_RELIABILITIES = [0.90, 0.85, 0.95, 0.80]
@@ -47,12 +47,12 @@ class C(BaseConstants):
 
     # Fuel images for round 4
     FUEL_IMAGES = ['BBM_A.jpeg', 'BBM_B.jpeg', 'BBM_C1.jpeg', 'BBM_C2.jpeg']
-    FUEL_NAMES = ['Pertamax Green', 'Pertamax', 'Pertamax Turbo', 'Pertalite']
+    FUEL_NAMES = ['Pertamax Green (A)', 'Pertamax (B)', 'Pertamax Turbo (C1)', 'Pertalite (C2)']
     FUEL_DESCRIPTIONS = [
-        'Kebutuhan full tank BBM mobil Anda sebanyak 50 liter dengan biaya Rp700 ribu (Pertamax Green RON 95) yang membuat mobil Anda memiliki 90% keawetan mesin ',
+        'Kebutuhan full tank BBM mobil Anda sebanyak 50 liter dengan biaya Rp700 ribu (Pertamax Green RON 95) yang membuat mobil Anda memiliki 90% keawetan mesin untuk penggunaan reguler sampai dengan tahun ke-5',
         'Kebutuhan full tank BBM mobil Anda sebanyak 50 liter dengan biaya Rp650 ribu (Pertamax RON 92) yang membuat mobil Anda memiliki 85% keawetan mesin untuk penggunaan reguler sampai dengan tahun ke-5',
-        'Kebutuhan full tank BBM mobil Anda sebanyak 50 liter dengan biaya Rp725 ribu (Pertamax Turbo RON 98) yang membuat mobil Anda memiliki 95% (Pertamax Turbo RON 98) keawetan mesin untuk penggunaan reguler sampai dengan tahun ke-5.',
-        'Kebutuhan full tank BBM mobil Anda sebanyak 50 liter dengan biaya Rp500 ribu (Pertalite RON 90) yang membuat mobil Anda memiliki 80% (Pertalite RON 90) keawetan mesin untuk penggunaan reguler sampai dengan tahun ke-5.'
+        'Kebutuhan full tank BBM mobil Anda sebanyak 50 liter dengan biaya Rp725 ribu (Pertamax Turbo RON 98) yang membuat mobil Anda memiliki 95% keawetan mesin untuk penggunaan reguler sampai dengan tahun ke-5.',
+        'Kebutuhan full tank BBM mobil Anda sebanyak 50 liter dengan biaya Rp500 ribu (Pertalite RON 90) yang membuat mobil Anda memiliki 80% keawetan mesin untuk penggunaan reguler sampai dengan tahun ke-5.'
     ]
     FUEL_PRICES = [700000, 650000, 725000, 500000]
     FUEL_RELIABILITIES = [0.90, 0.85, 0.95, 0.80]
