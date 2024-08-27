@@ -83,7 +83,7 @@ class C(BaseConstants):
         "Hanya ada segelintir orang yang membeli Pertamax Green RON 95. Kebanyakan menggunakan BBM konvensional (Pertalite, Pertamax, Pertamax Turbo, Biosolar, Dexlite, dan Pertadex) untuk kendaraan bermotornya.",
         "Bahan utama untuk campuran di Pertamax Green RON 95 berasal dari kelapa sawit yang banyak ditanam di Pulau Kalimantan, Sumatera, dan Sulawesi. "
     ]
-    wait_seconds = 1
+    wait_seconds = 10
 
 class Subsession(BaseSubsession):
     pass

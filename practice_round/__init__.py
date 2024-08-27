@@ -26,7 +26,7 @@ class C(BaseConstants):
         "Hanya ada segelintir rumah tangga yang menggunakan kompor listrik di daerah Anda tinggal. Kebanyakan memakai kompor gas konvensional.",
         "Kompor listrik yang tersedia di pasaran umumnya diproduksi oleh negara lain (China, Jepang, Korea Selatan, Jerman, dan Amerika). Produsen Indonesia hanya mampu memproduksi dan menjual kompor gas."
     ]
-    wait_seconds = 1
+    wait_seconds = 10
 
 class Subsession(BaseSubsession):
     pass
