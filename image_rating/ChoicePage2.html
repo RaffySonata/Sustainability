@@ -1,0 +1,24 @@
+{% extends "global/Page.html" %}
+{% load static %}
+
+{% block title %}
+    Pairwise Choice 2
+{% endblock %}
+
+{% block content %}
+    <form method="post">
+        <div>
+            <label>
+                <input type="radio" name="choice_2" value="{{ winner }}">
+                <img src="{% static winner_image %}" alt="Winner">
+            </label>
+            {% for key, image in images.items %}
+            <label>
+                <input type="radio" name="choice_2" value="{{ key }}">
+                <img src="{% static image %}" alt="Option {{ key }}">
+            </label>
+            {% endfor %}
+        </div>
+        <button type="submit">Next</button>
+    </form>
+{% endblock %}

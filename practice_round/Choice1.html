@@ -1,0 +1,111 @@
+{% extends "global/Page.html" %}
+
+{% load static %}
+
+{% block content %}
+<style>
+    .product-container {
+        display: flex;
+        justify-content: space-around;
+    }
+    .product {
+        border: 1px solid #ccc;
+        padding: 10px;
+        width: 45%;
+        text-align: center;
+    }
+    .product img {
+        width: 100%;
+    }
+    .choice-buttons {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+    }
+    .choice-buttons button {
+        margin: 0 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+        img.responsive {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        max-height: 200px; /* Adjust this as needed */
+    }
+
+    .choice-container {
+        text-align: center;
+    }
+
+    .confirmation-button {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+</style>
+
+<h2>Ronde Latihan {{player.round_number}}</h2>
+<h2>Pertanyaan 1</h2>
+<p>
+    Anda memiliki uang sebanyak <b>Rp{{ player.endowment_s }} juta</b> untuk digunakan membeli salah satu dari dua produk di bawah ini. <b>Kedua produk</b> di bawah ini merupakan produk yang dianggap sebagai <b>produk ramah keberlanjutan</b> yang memiliki ciri khas:
+</p>
+<ul>
+    <li>Tidak menimbulkan polusi bagi udara, air, dan tanah,</li>
+    <li>Tahan lama dan mudah terurai ketika sudah tidak digunakan,</li>
+    <li>Diproduksi menggunakan bahan yang terbarukan (contoh: bukan dari fosil),</li>
+    <li>Menggunakan konsumsi energi yang rendah,</li>
+    <li>Aman dan meminimalisir risiko sosial, ekonomi, dan lingkungan, serta</li>
+    <li>Sesuai dengan peraturan yang berlaku.</li>
+</ul>
+<p>
+    <b>Catatan:</b>
+</p>
+<ul>
+    <li>{{ context }}</li>
+</ul>
+<p>
+    Berikut adalah kedua produk tersebut untuk Anda pilih:
+</p>
+<form method="post">
+    <div class="product-container">
+        <div class="product">
+            <img src="{% static image_A %}" class="responsive" alt="Product A">
+            <h3>{{ name_A }}</h3>
+            <p>{{ desc_A }}</p>
+            <p>Harga: <b>Rp{{ price_A }}</b></p>
+            <label><input type="radio" name="chosen_product" value="A"> Pilih Produk Ini</label>
+        </div>
+        <div class="product">
+            <img src="{% static image_B %}" class="responsive" alt="Product B">
+            <h3>{{ name_B }}</h3>
+            <p>{{ desc_B }}</p>
+            <p>Harga: <b>Rp{{ price_B }}</b></p>
+            <label><input type="radio" name="chosen_product" value="B"> Pilih Produk Ini</label>
+        </div>
+    </div>
+    <br>
+    <p>
+        {{additional_info}}
+    </p>
+    <div class="choice-buttons">
+        <button id="btn_lanjut" disabled="disabled" class="otree-btn-next btn btn-primary">KONFIRMASI</button>
+    </div>
+</form>
+
+        <script>
+            var s = {{C.wait_seconds}};
+            var x = setInterval(function() {
+
+            // If the count down is over, write some text
+            if (s <= 0) {
+                clearInterval(x);
+                document.getElementById('btn_lanjut').disabled = false;
+                document.getElementById("btn_lanjut").textContent = "Konfirmasi"
+                } else {
+                document.getElementById("btn_lanjut").textContent = "Konfirmasi ("+s+")";
+                }
+                s--;
+            }, 1000);
+        </script>
+{% endblock %}

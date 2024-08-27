@@ -1,17 +1,41 @@
+{% extends "global/Page.html" %}
 
 {% block content %}
 
-<head>
-    <title>Hasil Practice Round</title>
-</head>
-<body>
-    <h1>Hasil Pilihan Anda</h1>
-    <p>Income: Rp{{ income }}</p>
-    <p>Penalty: Rp{{ risk_penalty }}</p>
-</body>
+<h2>Hasil Sesi Latihan</h2>
+
+<p>Berikut adalah rekap dari pilihan yang Anda buat:</p>
+
+<ul>
+    <li>Pilihan pada halaman pertama: {{ choice1_name }} dengan harga Rp{{ choice1_price }}</li>
+    <li>Pilihan pada halaman kedua: {{ choice2_name }} dengan harga Rp{{ choice2_price }}</li>
+    <li>Pilihan pada halaman ketiga: {{ choice3_name }} dengan harga Rp{{ choice3_price }}</li>
+</ul>
+
+<p><strong>Produk yang dipilih sebagai final secara random:</strong> {{ final_choice }} dengan harga Rp{{ chosen_price }}</p>
+
+<h3>Perhitungan Payoff:</h3>
+<ul>
+    <li>Endowment awal: Rp{{ endowment }}</li>
+    <li>Pengurangan untuk harga produk: Rp{{ chosen_price }}</li>
+    <li>Kerusakan yang terjadi (jika ada): Rp{{ risk_penalty }}</li>
+    <li><strong>Payoff ronde ini:</strong> Rp{{ payoff }}</li>
+</ul>
+
+<p>{{ background }}</p>
+
+<br>
+        <h1>Akhir Sesi Latihan</h1>
+        <p>Practice session telah selesai. Bersiaplah untuk menuju laman real experiment untuk sesi pertama di studi ini.</p>
 
 
-    {{ next_button }}
-{{ endblock }}
+    <div class="choice-buttons">
+        <button id="btn_lanjut" class="otree-btn-next btn btn-primary">Lanjut</button>
+    </div>
+{% endblock %}
+
+
+
+
 
 
